@@ -4,7 +4,7 @@ My exercise to translate Daniel van Flymen brilliant post "Learn Blockchain by B
 # Installation & Dependencies
 This version uses Sinatra as web framework, to install it:
 
-gem install budler
+gem install bundler
 bundle install
 
 # To Do

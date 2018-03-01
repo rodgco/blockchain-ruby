@@ -43,7 +43,8 @@ post '/transactions/new' do
     
     if !JSON.valid?(request_body) then
         status 400
-        body { :message => "Error: Please supply a valid JSON" }.to_json
+        response = { :message => "Error: Please supply a valid JSON" }
+        body response.to_json
         return 
     end
 
@@ -54,7 +55,8 @@ post '/transactions/new' do
 
     if !required.all? {|s| values.key? s} then
         status 400
-        body { :message => 'Error: Missing values' }.to_json
+        response = { :message => 'Error: Missing values' }
+        body response.to_json
         return
     end
 
